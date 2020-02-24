@@ -7,6 +7,8 @@ a simple event app built in python/rest
 - django: 3.0.3
 - djangorestframework-api-key: 1.4.1
 - These dependencies are in the project pipfile/piplock files and can be installed using pipenv, details below.
+- [pipfile] (https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile)
+- [pipfile.lock] (https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile.lock)
 
 ### Dependency Management
 The proejct dependencies are managed using [pipenv] (https://realpython.com/pipenv-guide/), read this to know more.
