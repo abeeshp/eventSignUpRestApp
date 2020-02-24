@@ -73,7 +73,6 @@ Quit the server with CONTROL-C.
 
 ### settings
 - the email details are in .settings 
-
-
+- FROM_MAIL_ID,TO_MAIL_ID change this if needed.
 
 
