@@ -1,0 +1,24 @@
+<!doctype html>
+{ % load rest_framework %}
+<html><body>
+<h1>New Signup</h1>
+    <p>
+        <a href ="http://127.0.0.1:8000/events/"></a>
+    </p>
+{% block content %}
+<form method="POST">
+
+    {% csrf_token %}
+    {% render_form serializer %}
+
+    <input type="submit" value="Save" />
+</form>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+</body></html>

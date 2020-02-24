@@ -1,0 +1,48 @@
+<!doctype html>
+{% load static %}
+{% load rest_framework %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>All the scheduled events to signUp</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/event.css' %}">
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 10px;
+}
+
+div {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+<h1>New Signup</h1>
+{% block content %}
+    <p>To see all the event-details
+        <a href ="http://127.0.0.1:8000/eventsList/">Events-List</a></br></br>
+    </p>
+<div>
+<form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="SignUp" />
+</form>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+</body></html>
