@@ -134,11 +134,11 @@ REST_FRAMEWORK = {
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gaijincoder01@gmail.com'
-EMAIL_HOST_PASSWORD = '3Bluecoders'
+EMAIL_HOST_USER = 'eventmanagepy@gmail.com'
+EMAIL_HOST_PASSWORD = ':**********'
 
-FROM_MAIL_ID = 'gaijincoder01@gmail.com'
-TO_MAIL_ID = 'gaijincoder01@gmail.com'
+FROM_MAIL_ID = 'eventmanagepy@gmail.com'
+TO_MAIL_ID = 'eventmanagepy@gmail.com'
 
 
 # API_KEY_CUSTOM_HEADER = "HTTP_X_API_KEY"
