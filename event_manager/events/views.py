@@ -32,13 +32,13 @@ class EventView(viewsets.ReadOnlyModelViewSet):
 
 
 class EventManage(viewsets.ModelViewSet):
-    # permission_classes = [HasAPIKey]
+    permission_classes = [HasAPIKey]
     queryset = Event.objects.all()
     serializer_class = EventSerializer
 
 
 class RegistrationDetails(viewsets.ModelViewSet):
-    # permission_classes = [HasAPIKey]
+    permission_classes = [HasAPIKey]
     queryset = Registration.objects.all()
     serializer_class = RegistrationSerializer
 
