@@ -7,11 +7,11 @@ a simple event app built in python/rest
 - django: 3.0.3
 - djangorestframework-api-key: 1.4.1
 - These dependencies are in the project pipfile/piplock files and can be installed using pipenv, details below.
-- [pipfile] (https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile)
-- [pipfile.lock] (https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile.lock)
+- [pipfile](https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile)
+- [pipfile.lock](https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile.lock)
 
 ### Dependency Management
-The proejct dependencies are managed using [pipenv] (https://realpython.com/pipenv-guide/), read this to know more.
+The proejct dependencies are managed using [pipenv](https://realpython.com/pipenv-guide/), read this to know more.
 
 #### To install pipenv
 - pip install pipenv
@@ -43,6 +43,10 @@ Quit the server with CONTROL-C.
 
 ------------------------------------------------------------  
 
+## Running tests
+- follow steps under Running the app/local server, cd event_manager
+- python manage.py test 
+
 ## Event Signups
 - goto http://localhost:8000/eventsList/ to list the evets
 - click Signup to goto the signup page to register for the event using emailId.
@@ -53,28 +57,29 @@ Quit the server with CONTROL-C.
 - Replace "**************" with the actual apiKey
 
 ### To get all the events
-- http GET http://127.0.0.1:8000/api/events/  "Authorization: Api-Key *********************"
+- GET http://127.0.0.1:8000/api/events/  "Authorization: Api-Key *********************"
 
 ### To get all signUps for an event
 - event_id is the eventsUniqueID
-- http GET http://127.0.0.1:8000/api/registrationDetails/?event_id=4  "Authorization: Api-Key *********************"
+- GET http://127.0.0.1:8000/api/registrationDetails/?event_id=4  "Authorization: Api-Key *********************"
 
 ### To sign up for the event
 - event_id is the eventsUniqueID
-- http POST http://127.0.0.1:8000/api/registrations/ email=user5@maildom.com event=16 name=testuser2 " "Authorization: Api-Key *********************"
+- POST http://127.0.0.1:8000/api/registrations/ email=user5@maildom.com event=16 name=testuser2 " "Authorization: Api-Key *********************"
 
 ### To remove a signup from the event
-- http DELETE http://127.0.0.1:8000/api/registrations/88/  "Authorization: Api-Key *********************"
+- DELETE http://127.0.0.1:8000/api/registrations/88/  "Authorization: Api-Key *********************"
 
 ### To remove the Event
-- http DELETE http://127.0.0.1:8000/api/events/15/  "Authorization: Api-Key *********************"
+-  DELETE http://127.0.0.1:8000/api/events/15/  "Authorization: Api-Key *********************"
 
 ### To get all signupgs
-- http GET http://127.0.0.1:8000/api/registrations/ "Authorization: Api-Key *********************"
+- GET http://127.0.0.1:8000/api/registrations/ "Authorization: Api-Key *********************"
 
 
 ### settings
 - the email details are in .settings 
 - FROM_MAIL_ID,TO_MAIL_ID change this if needed.
+- Change the password in the .settings to actual password
 
 
