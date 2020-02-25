@@ -85,4 +85,5 @@ Quit the server with CONTROL-C.
 - the project already comes with pre-scheduled events with sqllite db.
 - you can usee a lightweight [dbbrowser](https://sqlitebrowser.org/) to check the  details at backend.
 - the uniqueId for both events/registrations is autocreated by the restframework models.
+- uses gmail smtp to send mails, change this if you want to use something else.
 
