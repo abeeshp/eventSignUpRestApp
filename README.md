@@ -9,12 +9,13 @@ a simple event app built in python/rest
 - These dependencies are in the project pipfile/piplock files and can be installed using pipenv, details below.
 - [pipfile](https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile)
 - [pipfile.lock](https://github.com/abeeshp/eventSignUpRestApp/blob/master/Pipfile.lock)
+- The project has [requirements.txt](https://github.com/abeeshp/eventSignUpRestApp/blob/master/requirements.txt) to use with pip
 
 ### Dependency Management
 The proejct dependencies are managed using [pipenv](https://realpython.com/pipenv-guide/), read this to know more.
 
 #### To install pipenv
-- pip install pipenv
+- pip install pipenv or  on mac, brew install pipenv
 
 ##### Basic pipenv commands
 - pipenv install - this uses the pipfile/piplock file to install the required packages.
@@ -61,25 +62,27 @@ Quit the server with CONTROL-C.
 
 ### To get all signUps for an event
 - event_id is the eventsUniqueID
-- GET http://127.0.0.1:8000/api/registrationDetails/?event_id=4  "Authorization: Api-Key *********************"
+- GET http://127.0.0.1:8000/api/registrationDetails/?event_id=event_id  "Authorization: Api-Key *********************"
 
 ### To sign up for the event
 - event_id is the eventsUniqueID
 - POST http://127.0.0.1:8000/api/registrations/ email=user5@maildom.com event=16 name=testuser2 " "Authorization: Api-Key *********************"
 
 ### To remove a signup from the event
-- DELETE http://127.0.0.1:8000/api/registrations/88/  "Authorization: Api-Key *********************"
+- DELETE http://127.0.0.1:8000/api/registrations/signUp_id/  "Authorization: Api-Key *********************"
 
 ### To remove the Event
--  DELETE http://127.0.0.1:8000/api/events/15/  "Authorization: Api-Key *********************"
+-  DELETE http://127.0.0.1:8000/api/events/event_id/  "Authorization: Api-Key *********************"
 
 ### To get all signupgs
 - GET http://127.0.0.1:8000/api/registrations/ "Authorization: Api-Key *********************"
 
 
-### settings
+### settings/details
 - the email details are in .settings 
 - FROM_MAIL_ID,TO_MAIL_ID change this if needed.
 - Change the password in the .settings to actual password
-
+- the project already comes with pre-scheduled events with sqllite db.
+- you can usee a lightweight [dbbrowser](https://sqlitebrowser.org/) to check the  details at backend.
+- the uniqueId for both events/registrations is autocreated by the restframework models.
 
